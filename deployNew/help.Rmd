@@ -1,0 +1,16 @@
+```{r echo=FALSE}
+datasets <- readRDS("datasets.rds")
+```
+
+This study has two diets (`HC_LF` = high carb, low fat; `HF_LC` = high fat, low carb) with `r length(datasets)`  measurement sets collected on 192 mice:
+  
+```{r echo=FALSE, comment = ""}
+dataset <- dplyr::tibble(Name = names(datasets), "\ " = "  ", Description = datasets)
+print(as.data.frame(dataset), right = FALSE, row.names = FALSE)
+```
+
+<hr>
+See also
+
+- [Attie Lab Diabetes Database](http://diabetes.wisc.edu/)
+- GitHub: [byandell/FounderDietStudy](https://github.com/byandell/FounderDietStudy)
